@@ -1,70 +1,214 @@
-# React.js and Tailwind CSS Assignment
+# 🚀 React Task Manager Application
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+A modern, responsive React application built with Vite, React Router, and Tailwind CSS. Features include task management with local storage persistence, API integration with JSONPlaceholder, dark mode support, and a beautiful UI.
 
-## Assignment Overview
+![React](https://img.shields.io/badge/React-18.3-blue)
+![Vite](https://img.shields.io/badge/Vite-5.0-646CFF)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+## ✨ Features
 
-## Getting Started
+- ✅ **Task Management** - Create, complete, delete, and filter tasks
+- 🌓 **Dark Mode** - Beautiful light and dark themes
+- 📡 **API Integration** - Fetch and search data from JSONPlaceholder
+- 💾 **Local Storage** - Persistent task storage using custom hooks
+- 📱 **Responsive Design** - Mobile-first design that works on all devices
+- 🎨 **Modern UI** - Clean interface with smooth animations
+- 🔍 **Search & Filter** - Search posts and filter tasks efficiently
+- 📄 **Pagination** - Browse API data with pagination controls
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+## 🛠️ Technologies Used
 
-## Files Included
+- **React 18.3** - JavaScript library for building user interfaces
+- **Vite** - Next-generation frontend tooling
+- **React Router DOM** - Declarative routing for React
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Beautiful icon library
+- **JSONPlaceholder** - Fake REST API for testing
 
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
+## 📦 Installation
 
-## Requirements
+### Prerequisites
 
 - Node.js (v18 or higher)
 - npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
 
-## Project Structure
+### Setup Instructions
 
+1. **Clone the repository**
+```bash
+   git clone <your-repo-url>
+   cd <project-folder>
+```
+
+2. **Install dependencies**
+```bash
+   npm install
+```
+
+3. **Start the development server**
+```bash
+   npm run dev
+```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+## 📁 Project Structure
 ```
 src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
+├── api/                  # API integration functions
+│   └── fetchPosts.js     # JSONPlaceholder API calls
+├── components/           # Reusable UI components
+│   ├── Button.jsx        # Button with variants
+│   ├── Card.jsx          # Card layout component
+│   ├── Footer.jsx        # Footer with links
+│   ├── Navbar.jsx        # Navigation bar
+│   └── TaskManager.jsx   # Task management component
+├── context/              # React context providers
+│   └── ThemeContext.jsx  # Theme management (dark/light)
+├── hooks/                # Custom React hooks
+│   └── useLocalStorage.js # localStorage persistence hook
+├── pages/                # Page components
+│   ├── Home.jsx          # Home page with TaskManager
+│   └── ApiData.jsx       # API data display with search
+├── utils/                # Utility functions
+│   └── helpers.js        # Helper functions
+├── App.jsx               # Main app component with routing
+├── main.jsx              # React entry point
+└── index.css             # Global styles with Tailwind
 ```
 
-## Submission
+## 🎯 Key Components
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+### TaskManager
+- Add, complete, and delete tasks
+- Filter tasks by status (All, Active, Completed)
+- Persistent storage using custom `useLocalStorage` hook
+- Real-time statistics display
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+### API Data Explorer
+- Fetch posts from JSONPlaceholder API
+- Search functionality with real-time filtering
+- Pagination controls for browsing posts
+- Loading and error states
 
-## Resources
+### Theme Switcher
+- Toggle between light and dark modes
+- Persistent theme preference
+- Smooth transitions between themes
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+## 🚀 Deployment
+
+### Deploy to Vercel
+
+1. **Install Vercel CLI**
+```bash
+   npm install -g vercel
+```
+
+2. **Deploy**
+```bash
+   vercel
+```
+
+### Deploy to Netlify
+
+1. **Build the project**
+```bash
+   npm run build
+```
+
+2. **Deploy the `dist` folder** to Netlify via their dashboard or CLI
+
+### Deploy to GitHub Pages
+
+1. **Install gh-pages**
+```bash
+   npm install --save-dev gh-pages
+```
+
+2. **Add to package.json**
+```json
+   "homepage": "https://yourusername.github.io/your-repo-name",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d dist"
+   }
+```
+
+3. **Deploy**
+```bash
+   npm run deploy
+```
+
+## 📸 Screenshots
+
+### Light Mode
+![Home Page Light](./screenshots/home-light.png)
+
+### Dark Mode
+![Home Page Dark](./screenshots/home-dark.png)
+
+### Task Manager
+![Task Manager](./screenshots/task-manager.png)
+
+### API Data Page
+![API Data](./screenshots/api-data.png)
+
+## 🧪 Testing
+
+Run the development server and test:
+- ✅ Task CRUD operations
+- ✅ Theme switching
+- ✅ API data fetching
+- ✅ Search functionality
+- ✅ Pagination
+- ✅ Responsive design on different screen sizes
+
+## 📝 Assignment Requirements Checklist
+
+- [x] React project setup with Vite
+- [x] Tailwind CSS configuration
+- [x] Proper project structure
+- [x] React Router configuration
+- [x] Button component with variants
+- [x] Card component
+- [x] Navbar component
+- [x] Footer component
+- [x] Layout component
+- [x] TaskManager with full CRUD
+- [x] useState implementation
+- [x] useEffect implementation
+- [x] useContext for theme
+- [x] Custom useLocalStorage hook
+- [x] API integration (JSONPlaceholder)
+- [x] Loading and error states
+- [x] Pagination
+- [x] Search feature
+- [x] Responsive design
+- [x] Dark mode implementation
+- [x] Custom animations
+
+## 👨‍💻 Author
+
+Your Name - [GitHub Profile](kimenjuivy)
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙏 Acknowledgments
+
+- [React Documentation](https://react.dev)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Vite](https://vitejs.dev)
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com)
+- [Lucide Icons](https://lucide.dev)
+
+---
+
+**Live Demo:** [Add your deployment URL here]
+
+**Made with ❤️ using React & Tailwind CSS**
